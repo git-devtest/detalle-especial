@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Para ti ❤️</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Pantalla de bienvenida / Desbloqueo NFC -->
+    <div id="intro-screen" class="screen active">
+        <div class="nfc-pulse">
+            <span class="heart-icon">❤️</span>
+        </div>
+        <p class="subtitle">Conexión establecida</p>
+        <h1>Tengo algo para decirte...</h1>
+        <button id="btn-open" class="btn-primary">Abrir mensaje</button>
+    </div>
+
+    <!-- Contenido Principal -->
+    <main id="main-content" class="screen hidden">
+        <header>
+            <span class="badge">✨ Solo para ti</span>
+            <h2>Nuestra Historia</h2>
+        </header>
+
+        <!-- Contador de tiempo juntos -->
+        <section class="card timer-card">
+            <p class="card-label">Llevamos compartiendo momentos:</p>
+            <div id="time-counter" class="counter-grid">
+                <div class="time-box"><span id="days">0</span><small>Días</small></div>
+                <div class="time-box"><span id="hours">0</span><small>Horas</small></div>
+                <div class="time-box"><span id="minutes">0</span><small>Min</small></div>
+                <div class="time-box"><span id="seconds">0</span><small>Seg</small></div>
+            </div>
+        </section>
+
+        <!-- Carta / Mensaje Principal -->
+        <section class="card message-card">
+            <p class="letter-text">
+                Cada vez que acerques tu teléfono a este detalle, quiero que recuerdes lo importante que eres para mí. Gracias por cada risa, por tu compañía y por hacer mis días mucho mejores.
+            </p>
+            <p class="signature">Con todo mi cariño, <br><strong>JH - el producto</strong></p>
+        </section>
+
+        <!-- Generador interactivo de razones/recuerdos -->
+        <section class="card interactive-card">
+            <p class="card-label">Toca el botón para descubrir una razón:</p>
+            <div id="reason-display" class="reason-box">
+                "Por la forma en que iluminas cualquier lugar al que llegas."
+            </div>
+            <button id="btn-reason" class="btn-secondary">Siguiente razón ✨</button>
+        </section>
+
+        <!-- Botón de lluvia de amor -->
+        <button id="btn-love" class="btn-floating">Enviar un abrazo ❤️</button>
+    </main>
+
+    <div id="particles-container"></div>
+    <script src="script.js"></script>
+</body>
+</html>
